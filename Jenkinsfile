@@ -32,7 +32,7 @@ pipeline {
             steps {                 
                 echo "This is stage three"
                 echo "Name of the URL is ${ENV_URL}"
-                sh echo -e "\\e[32m Hai \\e[0m"
+                sh "echo -e "\\e[32m Hai \\e[0m"
             }
         }
     }
