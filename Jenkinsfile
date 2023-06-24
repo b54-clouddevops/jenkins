@@ -30,7 +30,7 @@ pipeline {
 
         stage('Stage TWO') {
             environment {
-                ENV_URL = "stage.google.com"                  // Stage  variable
+                ENV_URL = "stage.google.com"                  // Stage  variab
             }
             steps {                 
                 echo  "This is stage two"
