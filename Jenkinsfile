@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('Stage Two') {
+        stage('Stage TWO') {
             environment {
                 ENV_URL = "stage.google.com"                  // Stage  variable
             }
@@ -38,7 +38,7 @@ pipeline {
             }
         }
 
-        stage('Stage Three') {
+        stage('Stage THREE') {
             steps {                 
                 sh ''' 
                 echo "This is stage three"
