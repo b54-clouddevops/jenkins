@@ -20,19 +20,19 @@ pipeline {
                 stage('In Parallel 1') {
                         steps {
                             echo "In Parallel 1"
-                            sleep 15
+                            sleep 1
                         }
                     }
                 stage('In Parallel 2') {
                         steps {
                             echo "In Parallel 2"
-                            sleep 15
+                            sleep 1
                     }
                 }
                 stage('In Parallel 3') {
                         steps {
                             echo "In Parallel 3"
-                            sleep 15
+                            sleep 1
                     }
                 }
             }
@@ -67,7 +67,7 @@ pipeline {
 
             steps {                 
                 echo  "This is stage two"
-                sleep 10
+                sleep 13
             }
         }
 
@@ -83,7 +83,7 @@ pipeline {
                 echo "This is stage three"
                 echo "Name of the URL is ${ENV_URL}"
                 echo -e "\\e[31m Hai"
-                sleep 10
+                sleep 1
 
                 ''' 
             }
@@ -95,7 +95,7 @@ pipeline {
                 echo "This is stage Four"
                 echo "Name of the URL is ${ENV_URL}"
                 echo -e "\\e[31m Welcome"
-                sleep 10
+                sleep 1
 
                 ''' 
             }
