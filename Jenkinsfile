@@ -22,8 +22,8 @@ pipeline {
                 stage('In Parallel 1') {
                         steps {
                             echo "In Parallel 1"
-                            sleep 1
-                            hostname
+                            sh "sleep 1"
+                            sh "hostname"
                         }
                     }
                 stage('In Parallel 2') {
