@@ -33,7 +33,7 @@ pipeline {
             environment {
                 ENV_URL = "stage.google.com"                  // Stage  variab
             }
-            
+
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -42,12 +42,14 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
             }
+
             steps {                 
                 echo  "This is stage two"
             }
         }
 
         stage('Stage THREE') {
+            when { branch 'dev' }
             steps {                 
                 sh ''' 
                 echo "This is stage three"
@@ -57,6 +59,18 @@ pipeline {
                 ''' 
             }
         }
+
+        stage('Stage FOUR') {
+            steps {                 
+                sh ''' 
+                echo "This is stage Four"
+                echo "Name of the URL is ${ENV_URL}"
+                echo -e "\\e[31m Welcome"
+
+                ''' 
+            }
+        }
+
     }
 }
 
