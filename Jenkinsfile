@@ -106,7 +106,7 @@ pipeline {
         always { 
             echo 'I will always say Hello again!'
         }
-        aborter { 
+        aborted { 
             echo 'I will always say hai WHEN THE JOB IS ABORTED'
         }
     }
