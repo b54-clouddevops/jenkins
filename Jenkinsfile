@@ -118,4 +118,7 @@ node {
     stage('Test') {
             print 'Welcome To Scripted Pipelines'
     }
+    stage('Deploy') {
+            print 'Deploying'
+    }
 }
