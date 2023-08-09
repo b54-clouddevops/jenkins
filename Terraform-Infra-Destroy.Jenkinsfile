@@ -7,7 +7,7 @@ pipeline {
         ansiColor('xterm')    // Add's color to the output : Ensure you install AnsiColor Plugin.
     }
     stages {
-            stage('Creating-Shipping') {
+            stage('Destroying-Shipping') {
                 steps {
                     dir('SHIPPING') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/shipping.git'
                           sh '''
@@ -20,7 +20,7 @@ pipeline {
                         }
                     }
 
-            stage('Creating-User') {
+            stage('Destroying-User') {
                    steps {
                        dir('USER') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/user.git'
                           sh '''
@@ -33,7 +33,7 @@ pipeline {
                         }
                    }
                    
-            stage('Creating-Catalogue') {
+            stage('Destroying-Catalogue') {
                    steps {
                        dir('Catalogue') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/catalogue.git'
                           sh '''
@@ -45,7 +45,7 @@ pipeline {
                             }
                         }
                   }
-            stage('Creating-Payment') {
+            stage('Destroying-Payment') {
                 steps {
                     dir('PAYMENT') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/payment.git'
                           sh '''
@@ -58,7 +58,7 @@ pipeline {
                      }
                 }
 
-            stage('Creating-Cart') {
+            stage('Destroying-Cart') {
                 steps {
                     dir('CART') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/cart.git'
                           sh '''
@@ -72,7 +72,7 @@ pipeline {
                 }
                 
 
-            stage('Creating-Frontend') {
+            stage('Destroying-Frontend') {
                 steps {
                     dir('PAYMENT') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/frontend.git'
                           sh '''
