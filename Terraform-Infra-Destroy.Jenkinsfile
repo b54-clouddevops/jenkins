@@ -19,6 +19,7 @@ pipeline {
                             }
                         }
                     }
+
             stage('Creating-User') {
                    steps {
                        dir('USER') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/user.git'
@@ -31,6 +32,7 @@ pipeline {
                             }
                         }
                    }
+                   
             stage('Creating-Catalogue') {
                    steps {
                        dir('Catalogue') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/catalogue.git'
@@ -55,6 +57,7 @@ pipeline {
                          }
                      }
                 }
+
             stage('Creating-Cart') {
                 steps {
                     dir('CART') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/cart.git'
@@ -67,6 +70,7 @@ pipeline {
                          }
                      }
                 }
+                
 
             stage('Creating-Frontend') {
                 steps {
