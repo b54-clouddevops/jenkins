@@ -77,7 +77,7 @@ pipeline {
                     dir('PAYMENT') {  git branch: 'main', url: 'https://github.com/b54-clouddevops/frontend.git'
                           sh '''
                             cd mutable-infra
-                            sleep 300
+                            sleep 100
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
                             terraform destroy -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.1 -auto-approve
